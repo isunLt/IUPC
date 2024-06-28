@@ -1,0 +1,16 @@
+criterion:
+  name: sparse_assop2p_pl_ce
+  ignore_index: 0
+
+dataset:
+  name: sparse_label_mstep_assop2p_lc_nusc
+  superpixel: data/nuscenes/seeds_1024
+  sparse_label_path: data/nuscenes/weak_label
+
+model:
+  imagenet_pretrain: pretrain/resnet18-5c106cde.pth
+  in_channel: 4
+  proj_channel: 256
+  is_estep: False
+  name: spvcnn_swiftnet18_nusc_assop2p
+  cr: 0.64

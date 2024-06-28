@@ -1,0 +1,13 @@
+dataset:
+  name: prepare_sparse_label
+  sparse_label_path: data/nuscenes/weak_label
+  grid_size: [5.0, 0.1]
+  ps_min_num: 100  # 200
+  ps_norm_th: 0.75
+  ps_dis_th: 0.2
+  ps_outlier_th: 0.1
+  point_per_class: 1
+  clusterer:
+    name: hdbscan
+    min_cluster_size: 5
+    cluster_selection_epsilon: 0.5

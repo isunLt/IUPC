@@ -1,0 +1,14 @@
+criterion:
+  name: lc_lovasz
+  ignore_index: 0
+
+dataset:
+  name: random_label_lc_nusc
+  pts_sr: 0.014
+
+model:
+  imagenet_pretrain: pretrain/resnet18-5c106cde.pth
+  in_channel: 4
+  proj_channel: 256
+  name: spvcnn_swiftnet18_nusc
+  cr: 0.64

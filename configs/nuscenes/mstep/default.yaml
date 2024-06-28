@@ -1,0 +1,13 @@
+criterion:
+  name: sparse_pl_ce
+  ignore_index: 0
+
+dataset:
+  name: sparse_label_mstep_lc_nusc
+
+model:
+  imagenet_pretrain: pretrain/resnet18-5c106cde.pth
+  in_channel: 4
+  proj_channel: 256
+  name: spvcnn_swiftnet18_nusc
+  cr: 0.64

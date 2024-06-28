@@ -1,0 +1,12 @@
+dataset:
+  name: sparse_estep_lc_nusc
+  label_ratio: 0.5
+  superpixel: data/nuscenes/seeds_1024
+
+model:
+  imagenet_pretrain: pretrain/resnet18-5c106cde.pth
+  in_channel: 4
+  proj_channel: 256
+  is_estep: True
+  name: spvcnn_swiftnet18_nusc_assop2p
+  cr: 0.64

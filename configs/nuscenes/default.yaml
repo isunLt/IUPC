@@ -1,0 +1,32 @@
+data:
+  num_classes: 17
+  ignore_label: 0
+  training_size: 28130
+
+train:
+  seed: 1588147245
+  deterministic: False
+
+dataset:
+  root: /data/stf/datasets/nuscenes
+  voxel_size: 0.05
+  image_crop_rate: 0.4
+  pts_sr: 1.0
+#  pts_sr: 0.01
+  version: v1.0-trainval
+  use_color: False
+  use_augment: False
+
+num_epochs: 25
+batch_size: 4
+
+optimizer:
+  name: sgd
+#  lr: 1.2e-1
+  lr: 2.4e-1
+  weight_decay: 1.0e-4
+  momentum: 0.9
+  nesterov: true
+
+scheduler:
+  name: cosine_warmup
